@@ -1,0 +1,182 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Fullscreen Blur Overlay */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(15px); /* Transparent blur effect */
+    -webkit-backdrop-filter: blur(20px);
+    z-index: -1; /* Keeps the overlay behind content */
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1; /* Ensures it appears above the blur overlay */
+    padding: 14px; /* Optional: adds some space to ensure the glass card stays centered */
+    box-sizing: border-box;
+}
+
+/* Glass Card Styling */
+.glass-card {
+    width: 100%;
+    max-width: 320px; /* Reduced max width */
+    padding: 30px; /* Reduced padding */
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1); /* Very light transparency for card */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    color: white;
+}
+
+/* Profile Section */
+.profile-section {
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 100px; /* Smaller profile image */
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #00ffcc;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 20px; /* Smaller font size */
+    color: #00ffcc;
+    margin: 10px 0;
+}
+
+.status {
+    color: #d2000095;
+    font-weight: bold;
+}
+
+/* Social Links */
+.social-links {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    font-size: 18px; /* Smaller social link size */
+    color: #00ffcc;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ffffff;
+    transform: scale(1.2);
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.button {
+    background: #00ffcc;
+    color: black;
+    font-weight: bold;
+    padding: 10px 0; /* Reduced padding */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.button:hover {
+    background: #00bfa5;
+    transform: translateY(-3px);
+}
+
+/* Portfolio Preview */
+.portfolio-preview {
+    margin-top: 20px;
+}
+
+.portfolio-preview img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-preview img:hover {
+    transform: scale(1.05);
+}
+
+/* General styles for the new prints page */
+.print-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.print-item {
+    position: relative;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1); /* Slight transparency for card effect */
+    border-radius: 5px;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.print-image {
+    width: 100%;
+    border-radius: 5px;
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.download-button {
+    background: #00ffcc;
+    color: black;
+    font-weight: bold;
+    padding: 10px 0;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.2s, background 0.3s;
+    display: inline-block;
+}
+
+.download-button:hover {
+    background: #00bfa5;
+    transform: translateY(-3px);
+}
+
+/* Add other necessary styles here */
+
